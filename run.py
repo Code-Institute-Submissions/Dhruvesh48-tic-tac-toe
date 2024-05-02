@@ -1,3 +1,22 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from random import randint
+
+#scores = {"computer": 0, "player": 0}
+
+
+
+class gameBoard:
+    """
+    Main game board class. Sets the size of game board.....
+    """
+
+    def __init__(self, size, name):
+        self.size = size
+        self.name = name
+        self.action = []
+        self.board = [[" " for x in range(3)] for y in range(3)]
+
+
+
+
+    
+
