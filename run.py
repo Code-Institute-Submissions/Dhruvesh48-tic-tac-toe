@@ -15,7 +15,12 @@ class gameBoard:
         self.action = []
         self.board = [[" " for x in range(3)] for y in range(3)]
 
-
+    def display_board(self):
+        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
+        print("-----------")
+        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
+        print("-----------")
+        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
 
 
     
