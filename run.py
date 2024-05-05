@@ -1,27 +1,25 @@
-from random import randint
+#import random library
+import random
 
-#scores = {"computer": 0, "player": 0}
+#Defined global variables
+MAX_BOARD_DIMENSION = 3
+MAX_BOARD_SIZE = MAX_BOARD_DIMENSION * MAX_BOARD_DIMENSION - 1
+MIN_BOARD_SIZE = 0
+
+USER_SYMBOL = "X"
+COMPUTER_SYMBOL = "O"
 
 
 
-class gameBoard:
+class TicTacToe:
     """
-    Main game board class. Sets the size of game board.....
+    Main TicTacToe class. Display game board, takes usser and computer input, check the position of the input, tells user who the winner is.
     """
-
-    def __init__(self, size, name):
-        self.size = size
+    def __init__(self, name):
         self.name = name
-        self.action = []
-        self.board = [[" " for x in range(3)] for y in range(3)]
+        self.board = [location for location in range(1,10)]
+        self.winner = None
+        self.game_over = False
+        self.computer = "Computer"
 
-    def display_board(self):
-        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
-        print("-----------")
-        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
-        print("-----------")
-        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
-
-
-    
 
