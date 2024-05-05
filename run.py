@@ -32,5 +32,32 @@ class TicTacToe:
         print("-----------")
         print(f" {self.board[6]} | {self.board[7]} | {self.board[8]} ")
 
+    def user_input(self):
+        """
+        This takes user input, try which will raise ValueError if range is outside 1-9,
+        raise ValueError if input are not integers. It will add the symbol to the display board method.
+        """
+        while True:
+            try:
+                guess = int(input("Please enter a number between 1-9:\n")) - 1
+                if guess < MIN_BOARD_SIZE or guess > MAX_BOARD_SIZE:
+                    raise ValueError(
+                        "Please Enter a number between 1-9"
+                    )
+            except ValueError as e:
+                print(f"Invalid Input: Please Enter a number between 1-9 , please try again.")
+                self.user_input()
+                return False
+            
+            if  self._check_occupied(guess):
+                print("The place is occupied please choose another!")
+                continue
+
+            self.board[guess] = USER_SYMBOL
+            print(f"You guess is: {guess + 1}")
+            return True
+
+
+
 
 
