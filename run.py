@@ -131,5 +131,24 @@ class TicTacToe:
             else:
                 print(f"{self.computer} wins.")
 
+    def diagonal_match(self):
+        """
+        Checks each possible outcome user can win diagonally and display user who wins.
+        """
+        if self.board[0] == self.board[4] == self.board[8]:
+            self.game_over = True
+            self.winner = self.board[0]
+            if self.winner == USER_SYMBOL:
+                print(f"Congratulaton! {self.name} you have won the game")
+            else:
+                print(f"{self.computer} wins.")
+        elif self.board[2] == self.board[4] == self.board[6]:
+            self.game_over = True
+            self.winner = self.board[2]
+            if self.winner == USER_SYMBOL:
+                print(f"Congratulaton! {self.name} you have won the game")
+            else:
+                print(f"{self.computer} wins.")
+
 
 
