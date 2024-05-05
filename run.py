@@ -160,6 +160,19 @@ class TicTacToe:
             self.winner = None
             return True
 
+    def _check_game_state(self):
+        """
+        Calls out the 3 match fuction.
+        """
+        self.vertical_match()
+        if self.game_over:
+            return 
+        
+        self.horizontal_match()
+        if self.game_over:
+            return 
+        
+        self.diagonal_match()
 
 
 
