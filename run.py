@@ -150,5 +150,16 @@ class TicTacToe:
             else:
                 print(f"{self.computer} wins.")
 
+    def _board_full(self):
+        """
+        Checks if the board is full, if yes then tell user the game has been tied.
+        """
+        if all([self._check_occupied(index) for index in range(len(self.board))]):
+            print("The game has been tied")
+            self.game_over = True
+            self.winner = None
+            return True
+
+
 
 
