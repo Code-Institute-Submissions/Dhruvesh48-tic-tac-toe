@@ -88,21 +88,34 @@ if the user make 3 row then user wins else computer wins if both failed then the
 ---
 - Display game board
   - Player should see a Tic-Tac-Toe board with numbers between 1-9
+
 ![Introduction](images/introduction.png)
+
 ![display board](images/display-board.png)
+
 - Play against the computer
 - Input validation and error-checking
+
 ![user name](images/name.png)
+
   - Accept user input
+
 ![user input](images/display-board.png)
+
   - checks if the input is between 1-9 and an integer
   - Computer input randomly generated
+
 ![update board](images/update-board.png)
+
   - if the space has a symbol than it will tell occupied
+
 ![check error](images/check-error.png)
+
 - Display the board with symbols as user and computer input their choice
 - Tell user the result of the game at the end
+
 ![result](images/update-results.png)
+
 - Data maintained in class instances
 
 ---
@@ -135,7 +148,7 @@ The Tic-Tac-Toe class holds the display of the game board, the guess of user, th
   
 ### Validator testing
 
-- PEP8
+- [PEP8](https://pep8ci.herokuapp.com/#)
   - Passed the code using PEP8 and confirmed their are no problems
 
 ---
