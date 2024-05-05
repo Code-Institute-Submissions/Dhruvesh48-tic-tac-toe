@@ -160,7 +160,7 @@ class TicTacToe:
             self.winner = None
             return True
 
-    def _check_game_state(self):
+    def check_game_state(self):
         """
         Calls out the 3 match fuction.
         """
@@ -179,7 +179,21 @@ class TicTacToe:
         Checks if the symbol is at the index, if yes then calls check game state function to check if one the possibility is true or not.
         """
         if self.board[index] == symbol:
+            self.check_game_state()
+
+    def play_game(self):
+        """
+        Calls out all the function user sees and put it all in loop until the game is over.
+        """
+        while self.game_over == False:
+            self.display_board()
+
+            user_input = self.user_input()
+            self.make_move(user_input, USER_SYMBOL)
+
+            self.computer_input()
             self._check_game_state()
 
+        self.display_board()
 
 
