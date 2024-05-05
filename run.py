@@ -73,5 +73,11 @@ class TicTacToe:
             print(f"Computer guess is: {computer_move + 1}")
             return True
 
+    def _check_occupied(self, index):
+        """
+        Checks if the symbol has occupied the space or not.
+        """
+        return self.board[index] in (USER_SYMBOL, COMPUTER_SYMBOL)
+
 
 
