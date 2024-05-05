@@ -22,4 +22,15 @@ class TicTacToe:
         self.game_over = False
         self.computer = "Computer"
 
+    def display_board(self):
+        """
+        Display the game board to the user.
+        """
+        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
+        print("-----------")
+        print(f" {self.board[3]} | {self.board[4]} | {self.board[5]} ")
+        print("-----------")
+        print(f" {self.board[6]} | {self.board[7]} | {self.board[8]} ")
+
+
 
