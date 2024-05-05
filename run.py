@@ -170,30 +170,25 @@ class TicTacToe:
         self.horizontal_match()
         if self.game_over:
             return 
-        
+
         self.diagonal_match()
 
-    def make_move(self, index, symbol):
-        """
-        Checks if the symbol is at the index, if yes then calls check game state function to check if one the possibility is true or not.
-        """
-        if self.board[index] == symbol:
-            self.check_game_state()
 
     def play_game(self):
         """
         Calls out all the function user sees and put it all in loop until the game is over.
         """
+        self.display_board()
         while self.game_over == False:
-            self.display_board()
-
-            user_input = self.user_input()
-            self.make_move(user_input, USER_SYMBOL)
+            self.user_input()
+            self.check_game_state()
 
             self.computer_input()
             self.check_game_state()
 
-        self.display_board()
+            self.display_board()
+
+        
 
 def start_game():
     """
