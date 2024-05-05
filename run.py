@@ -174,5 +174,12 @@ class TicTacToe:
         
         self.diagonal_match()
 
+    def make_move(self, index, symbol):
+        """
+        Checks if the symbol is at the index, if yes then calls check game state function to check if one the possibility is true or not.
+        """
+        if self.board[index] == symbol:
+            self._check_game_state()
+
 
 
