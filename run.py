@@ -57,7 +57,21 @@ class TicTacToe:
             print(f"You guess is: {guess + 1}")
             return True
 
+    def computer_input(self):
+        """
+        This takes computer input, It will add the symbol to the display board method.
+        """
+        if self._board_full() or self.game_over:
+            return
+        
+        while True:
+            computer_move = random.randint(0, 8)
+            if self._check_occupied(computer_move):
+                continue
 
+            self.board[computer_move] = COMPUTER_SYMBOL
+            print(f"Computer guess is: {computer_move + 1}")
+            return True
 
 
 
