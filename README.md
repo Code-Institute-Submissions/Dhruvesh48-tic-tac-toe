@@ -178,6 +178,7 @@ Python
 #### Frameworks, Libraries & Programs Used
 
 - Python library [random](https://docs.python.org/3/library/random.html#module-random) was used to randomly generate numbers.
+- [ui.dev](https://ui.dev/amiresponsive) - To create views of the website on different viewing devices.
 
 ## Deployment
 
