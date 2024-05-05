@@ -10,7 +10,6 @@ USER_SYMBOL = "X"
 COMPUTER_SYMBOL = "O"
 
 
-
 class TicTacToe:
     """
     Main TicTacToe class. Display game board, takes usser and computer input, check the position of the input, tells user who the winner is.
@@ -192,8 +191,18 @@ class TicTacToe:
             self.make_move(user_input, USER_SYMBOL)
 
             self.computer_input()
-            self._check_game_state()
+            self.check_game_state()
 
         self.display_board()
 
+def start_game():
+    """
+    Calls the instance of TicTacToe which will ask user for their name.
+    """
+    name = TicTacToe("Dhruvesh")
+    #name = TicTacToe(input("Please Type your name: "))
+    name.play_game()
+    print(name)
 
+if __name__ == "__main__":
+    start_game()
