@@ -81,7 +81,7 @@ class TicTacToe:
 
     def vertical_match(self):
         """
-        Checks each possible outcome user can win vertically and tells user who wins.
+        Checks each possible outcome user can win vertically and display user who wins.
         """
         if self.board[0] == self.board[3] == self.board[6]:
             self.game_over = True
@@ -100,6 +100,32 @@ class TicTacToe:
         elif self.board[2] == self.board[5] == self.board[8]:
             self.game_over = True
             self.winner = self.board[2]
+            if self.winner == USER_SYMBOL:
+                print(f"Congratulaton! {self.name} you have won the game")
+            else:
+                print(f"{self.computer} wins.")
+
+    def horizontal_match(self):
+        """
+        Checks each possible outcome user can win horizontally and display user who wins.
+        """
+        if self.board[0] == self.board[1] == self.board[2]:
+            self.game_over = True
+            self.winner = self.board[0]
+            if self.winner == USER_SYMBOL:
+                print(f"Congratulaton! {self.name} you have won the game")
+            else:
+                print(f"{self.computer} wins.")
+        elif self.board[3] == self.board[4] == self.board[5]:
+            self.game_over = True
+            self.winner = self.board[3]
+            if self.winner == USER_SYMBOL:
+                print(f"Congratulaton! {self.name} you have won the game")
+            else:
+                print(f"{self.computer} wins.")
+        elif self.board[6] == self.board[7] == self.board[8]:
+            self.game_over = True
+            self.winner = self.board[6]
             if self.winner == USER_SYMBOL:
                 print(f"Congratulaton! {self.name} you have won the game")
             else:
