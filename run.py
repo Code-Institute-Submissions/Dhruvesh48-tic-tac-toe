@@ -21,6 +21,16 @@ class TicTacToe:
         self.game_over = False
         self.computer = "Computer"
 
+    def introduction(self):
+        """
+        Introduce user to the game and tell them the rules of the game to win.
+        """
+        print("------------------------------------------")
+        print(f"Welcome {self.name} to Tic-Tac-Toe!!!!")
+        print(f"Match your symbol({USER_SYMBOL}) 3 in a row going from top to bottom, left to right or diagonally corner to corner to win.")
+        print("Enjoy!!!!!")
+        print("------------------------------------------")
+
     def display_board(self):
         """
         Display the game board to the user.
@@ -178,13 +188,14 @@ class TicTacToe:
         """
         Calls out all the function user sees and put it all in loop until the game is over.
         """
+        self.introduction()
         self.display_board()
         while self.game_over == False:
-            self.user_input()
-            self.check_game_state()
+            if self.user_input():
+                self.check_game_state()
 
-            self.computer_input()
-            self.check_game_state()
+            if self.computer_input():
+                self.check_game_state()
 
             self.display_board()
 
@@ -194,8 +205,7 @@ def start_game():
     """
     Calls the instance of TicTacToe which will ask user for their name.
     """
-    name = TicTacToe("Dhruvesh")
-    #name = TicTacToe(input("Please Type your name: "))
+    name = TicTacToe(input("Please Type your name:\n"))
     name.play_game()
     print(name)
 
