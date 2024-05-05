@@ -16,7 +16,7 @@ class TicTacToe:
     """
     def __init__(self, name):
         self.name = name
-        self.board = [location for location in range(1,10)]
+        self.board = [location for location in range(1, 10)]
         self.winner = None
         self.game_over = False
         self.computer = "Computer"
